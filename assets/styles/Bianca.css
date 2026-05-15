@@ -1,0 +1,36 @@
+/* imposto il body della pagina */
+body{
+    background-color: var(--color-background);
+}
+
+/* creo la griglia della pagina */
+.contenitore{
+    display: grid; /*attiva la griglia*/
+    grid-template-areas: /*tipo griglia*/
+    "header header"
+    "nav nav"
+    "main main"
+    "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 30px 20px 1fr 20px;
+    gap: 10px;
+    height: 600px;
+}
+
+header{
+    /* aria grid */
+    grid-area: header;
+
+    /* sfondo */
+    background-color: var(--color-surface);
+
+    /* colore testo */
+    color:var(--color-text);
+
+    display:flex;
+    /* centra orizzontale */
+    justify-content: center;
+    /* centra verticale */
+    align-items: center;
+    padding: var(--spaziatura);
+}
