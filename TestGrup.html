@@ -1,16 +1,161 @@
 <!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ordina a domicilio</title>
+  <meta name="description" content="Ordina a domicilio i piatti del giorno">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/styles/theme.css">
+  <link rel="stylesheet" href="assets/styles/Riccardo.css">
+</head>
+<body>
+  <!-- Barra superiore con link alla homepage -->
+  <header class="topbar">
+    <a class="home-link" href="index.html">Le Nostre Delizie</a>
+    <span class="delivery-time">Consegna oggi 12:00-14:30</span>
+  </header>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="TestGrup.css">
-    </head>
-    <body>
-       <a href="index.html">Homepage</a>
+  <main class="order-page">
+    <!-- Sezione introduttiva della pagina ordine -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Menu del giorno</p>
         <h1>Ordina a domicilio</h1>
-    </body>
+        <p>Scegli il tuo pranzo completo: due proposte per ogni portata, preparate oggi e consegnate a casa.</p>
+      </div>
+      <div class="hero-card">
+        <span>Ordine minimo</span>
+        <strong>12,00 euro</strong>
+      </div>
+    </section>
+
+    <!-- Sezione menu con i piatti del giorno -->
+    <section class="menu-section" aria-label="Piatti del giorno">
+      <div class="section-heading">
+        <h2>Piatti disponibili</h2>
+        <p>Seleziona un piatto per portata e completa i dati per la consegna.</p>
+      </div>
+
+      <form class="order-form">
+        <!-- Scelta antipasto -->
+        <fieldset class="course">
+          <legend>Antipasti</legend>
+          <label class="dish-card">
+            <input type="radio" name="antipasto" value="bruschette" checked>
+            <span>
+              <strong>Bruschette al pomodoro</strong>
+              <small>Pane croccante, pomodorini, basilico e olio extra vergine.</small>
+            </span>
+            <b>5,00 euro</b>
+          </label>
+          <label class="dish-card">
+            <input type="radio" name="antipasto" value="caprese">
+            <span>
+              <strong>Caprese fresca</strong>
+              <small>Mozzarella, pomodoro, origano e insalata di stagione.</small>
+            </span>
+            <b>6,00 euro</b>
+          </label>
+        </fieldset>
+
+        <!-- Scelta primo piatto -->
+        <fieldset class="course">
+          <legend>Primi</legend>
+          <label class="dish-card">
+            <input type="radio" name="primo" value="carbonara" checked>
+            <span>
+              <strong>Spaghetti alla carbonara</strong>
+              <small>Pasta, uova, pecorino, pepe nero e guanciale croccante.</small>
+            </span>
+            <b>9,00 euro</b>
+          </label>
+          <label class="dish-card">
+            <input type="radio" name="primo" value="risotto">
+            <span>
+              <strong>Risotto agli asparagi</strong>
+              <small>Riso mantecato con asparagi, grana e scorza di limone.</small>
+            </span>
+            <b>10,00 euro</b>
+          </label>
+        </fieldset>
+
+        <!-- Scelta secondo piatto -->
+        <fieldset class="course">
+          <legend>Secondi</legend>
+          <label class="dish-card">
+            <input type="radio" name="secondo" value="pollo" checked>
+            <span>
+              <strong>Pollo al forno</strong>
+              <small>Coscia di pollo dorata con patate e rosmarino.</small>
+            </span>
+            <b>11,00 euro</b>
+          </label>
+          <label class="dish-card">
+            <input type="radio" name="secondo" value="verdure">
+            <span>
+              <strong>Parmigiana di verdure</strong>
+              <small>Melanzane, zucchine, pomodoro e formaggio filante.</small>
+            </span>
+            <b>10,00 euro</b>
+          </label>
+        </fieldset>
+
+        <!-- Scelta dolce -->
+        <fieldset class="course">
+          <legend>Dolci</legend>
+          <label class="dish-card">
+            <input type="radio" name="dolce" value="tiramisu" checked>
+            <span>
+              <strong>Tiramisu della casa</strong>
+              <small>Crema al mascarpone, caffe e cacao amaro.</small>
+            </span>
+            <b>5,00 euro</b>
+          </label>
+          <label class="dish-card">
+            <input type="radio" name="dolce" value="crostata">
+            <span>
+              <strong>Crostata alla marmellata</strong>
+              <small>Pasta frolla artigianale con confettura di albicocche.</small>
+            </span>
+            <b>4,00 euro</b>
+          </label>
+        </fieldset>
+
+        <!-- Dati per la consegna a domicilio -->
+        <section class="delivery-box" aria-label="Dati per la consegna">
+          <h2>Dati consegna</h2>
+          <div class="form-grid">
+            <label>
+              Nome e cognome
+              <input type="text" name="nome" placeholder="Mario Rossi" required>
+            </label>
+            <label>
+              Telefono
+              <input type="tel" name="telefono" placeholder="333 1234567" required>
+            </label>
+            <label class="wide">
+              Indirizzo
+              <input type="text" name="indirizzo" placeholder="Via Roma 15" required>
+            </label>
+            <label>
+              Orario preferito
+              <select name="orario">
+                <option>12:00 - 12:30</option>
+                <option>12:30 - 13:00</option>
+                <option>13:00 - 13:30</option>
+                <option>13:30 - 14:00</option>
+              </select>
+            </label>
+            <label>
+              Persone
+              <input type="number" name="persone" min="1" max="8" value="1">
+            </label>
+          </div>
+          <button type="submit">Invia ordine</button>
+        </section>
+      </form>
+    </section>
+  </main>
+</body>
 </html>
