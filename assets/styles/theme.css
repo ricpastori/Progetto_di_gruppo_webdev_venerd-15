@@ -1,0 +1,65 @@
+/* Palette generata con l'AI
+*/
+
+:root {
+	/* =========================
+     Base colors
+  ========================= */
+
+	--color-background: #f8f5f0;
+	--color-surface: #ffffff;
+	--color-surface-alt: #efe7dc;
+
+	/* =========================
+     Primary palette
+  ========================= */
+
+	--color-primary: #8b1e1e;
+	--color-primary-hover: #a62828;
+	--color-primary-light: #d9b4b4;
+
+	/* =========================
+     Accent colors
+  ========================= */
+
+	--color-accent: #d4a373;
+	--color-accent-hover: #e3b98e;
+
+	/* =========================
+     Text colors
+  ========================= */
+
+	--color-text: #1f1f1f;
+	--color-text-muted: #5f5f5f;
+	--color-text-light: #ffffff;
+
+	/* =========================
+     Border colors
+  ========================= */
+
+	--color-border: #ddd4c8;
+	--color-border-strong: #bcae9f;
+
+	/* =========================
+     Shadows
+  ========================= */
+
+	--shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+	--shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+	/* =========================
+     Radius
+  ========================= */
+
+	--radius-sm: 6px;
+	--radius-md: 12px;
+	--radius-lg: 20px;
+
+	/* =========================
+     Transitions
+  ========================= */
+
+	--transition-fast: 0.2s ease;
+	--transition-normal: 0.3s ease;
+	--transition-slow: 0.5s ease;
+}
